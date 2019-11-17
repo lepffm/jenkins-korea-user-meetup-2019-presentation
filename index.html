@@ -279,14 +279,18 @@ hello.groovy<code data-trim data-noescape>print 'hello ' + Jenkins.instance.syst
 					</section>
 					<section>
 						AS-IS<br>
+						<span class="fragment">
 						<p class="left">master</p>
 						<ul><li>create node</li>
 							<li>hand over slave.jar, script with secrets</li></ul>
+						</span>
+						<span class="fragment">
 						<p class="left">target server</p>
 						<ul>
 						<li>create slave directory and upload files</li>
 						<li>launch jnlp slave</li>
 						</ul>
+						</span>
 						</section>
 					<section>
 						TO-BE<br>
