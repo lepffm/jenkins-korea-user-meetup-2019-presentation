@@ -110,7 +110,8 @@
 							  <pre><code  class="bash" data-trim data-noescape>curl --user $TOKEN -X POST -g \
 "http://jenkins.meetup:8080/\
 computer/SLAVE/api/xml?xpath=//offline[.='false']"</code></pre>
-								<ul class="fragment">
+							  <span class="fragment">
+								<ul>
 								  <li>Java - square의 <a href="https://square.github.io/retrofit/">Retrofit</a> 활용</li>
 								</ul>
 								<pre><code class="java" data-trim data-noescape>public interface JenkinsRestClient {
@@ -118,6 +119,7 @@ computer/SLAVE/api/xml?xpath=//offline[.='false']"</code></pre>
 	Call<Void> buildWithParameters(@Path("JOB") String job, 
 		@QueryMap Map<String, String> queryParams);
 }</code></pre>
+</span>
 							  </section>
 							  <section>
 								<h3 style="color:yellow;">client libraries</h3>
