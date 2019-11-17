@@ -216,6 +216,21 @@ assert plugin</code></pre></p>
 			  
 						  </section>
 						  <section>
+							  <h3>Using Pipeline</h3>
+								  <pre><code class="groovy">pipeline {
+  agent any
+  stages{
+    stage{
+      steps{
+        script{
+	  def ret=sh(script: "curl -X POST http://$JENKINS/scriptText -d "script=xxxx", returnStdout: true)
+	}
+      }
+    }
+  }
+}</pre>
+							  </section>
+						  <section>
 							  <h3>Using Ansible</h3>
 								<ul>
 								  <li>like a curl - use uri module</li>
