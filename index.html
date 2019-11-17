@@ -224,7 +224,7 @@ assert plugin</code></pre></p>
       steps{
         script{
 	  def ret=sh(returnStdout: true, 
-	    script: "curl -X POST http://$JENKINS/scriptText -d \"script=xxxx\")
+	    script: "curl -X POST http://$JENKINS/scriptText -d \"script=xxxx\"")
 	}
       }
     }
