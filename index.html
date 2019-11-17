@@ -262,12 +262,24 @@ hello.groovy<code data-trim data-noescape>print 'hello ' + Jenkins.instance.syst
 						<h1>with ansible</h1>
 					</section>
 					<section>
-						
-						<ul><li>create node - master</li>
-						<li>create slave directory - slave</li>
-						<li>download slave.jar - slave</li>
-						<li>generate startup script - slave</li>
-						<li>launch jnlp slave - slave</li>
+						AS-IS<br>
+						master
+						<ul><li>create node</li>
+							<li>hand over slave.jar, script with secrets</li></ul>
+						target server
+						<ul>
+						<li>create slave directory and upload files</li>
+						<li>launch jnlp slave</li>
+						</ul>
+						</section>
+					<section>
+						TO-BE<br>
+						ansible
+						<ul><li>create node</li>
+						<li>create slave directory </li>
+						<li>download slave.jar</li>
+						<li>generate startup script</li>
+						<li>launch jnlp slave</li>
 						</ul>
 						</section>
 						  <section><h4>groovy script</h4>
