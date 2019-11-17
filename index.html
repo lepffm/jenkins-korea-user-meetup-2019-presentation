@@ -113,13 +113,13 @@
 								
 							  </ul>
 							  <span class="fragment">
-							  <p>slave health check - 200 OR DIE
-							  <pre><code  class="bash" data-trim data-noescape>curl --user $TOKEN -X POST -g \
+							  <p>
+							  <pre>slave health check - 200 OR DIE<code  class="bash" data-trim data-noescape>curl --user $TOKEN -X POST -g \
 "http://jenkins.meetup:8080/\
 computer/SLAVE/api/xml?xpath=//offline[.='false']"</code></pre></p></span>
 							  <span class="fragment">
-								<p>Java - square의 <a href="https://square.github.io/retrofit/">Retrofit</a> 활용
-								<pre><code class="java" data-trim data-noescape>public interface JenkinsRestClient {
+								<p>
+								<pre>Java - square의 <a href="https://square.github.io/retrofit/">Retrofit</a> 활용<code class="java" data-trim data-noescape>public interface JenkinsRestClient {
 	@POST("job/{JOB}/buildWithParameters?delay=0sec")
 	Call<Void> buildWithParameters(@Path("JOB") String job, 
 		@QueryMap Map<String, String> queryParams);
