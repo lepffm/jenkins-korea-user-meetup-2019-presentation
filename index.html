@@ -310,7 +310,6 @@ if(slave){ print slave.computer.jnlpMac }</code></pre>
   args:
   chdir: "{{slave_home}}"
   executable: /bin/bash
-
 - shell: "{{slave_home}}/slave-start.sh" #run script
   args:
   chdir: "{{slave_home}}"
