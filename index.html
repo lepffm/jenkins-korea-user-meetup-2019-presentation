@@ -39,7 +39,7 @@
 				<section>
 					<h3>various methods of</h3>
 					<h2>Jenkins Infrastructure Management</h2>
-					<p class="fragment">
+					<p>
 						<small>by Glen</small>
 					</p>
 				</section>
@@ -256,7 +256,7 @@ hello.groovy<code data-trim data-noescape>print 'hello ' + Jenkins.instance.syst
 						</ul>
 						</section>
 						  <section><h4 style="color:yellow;">groovy script</h4>
-							<pre><code class="groovy">import hudson.model.*
+							<pre><code class="groovy number-lines">import hudson.model.*
 import jenkins.model.*
 import hudson.slaves.*
 import hudson.slaves.EnvironmentVariablesNodeProperty.Entry
@@ -271,7 +271,7 @@ Jenkins.instance.addNode(slave)
 if(slave){ print slave.computer.jnlpMac }</code></pre>
 						  </section>
 						  <section><h4 style="color:yellow;">ansible playbook 1/3</h4>
-						  <pre><code class="yaml">- template: #create groovy script from template
+						  <pre><code class="yaml number-lines">- template: #create groovy script from template
   src: "create_jnlp_slave.groovy.j2"
   dest: "create_jnlp_slave.groovy"
 
@@ -287,7 +287,7 @@ if(slave){ print slave.computer.jnlpMac }</code></pre>
 	secret: "{{result.content}}"</code></pre>
 					</section>
 					<section><h4 style="color:yellow;">ansible playbook 2/3</h4>
-					<pre><code class="groovy">- file: #create directory
+					<pre><code class="yaml number-lines">- file: #create directory
 	path: "{{slave_home}}"
 	state: directory
 
@@ -301,7 +301,7 @@ if(slave){ print slave.computer.jnlpMac }</code></pre>
 	executable: /bin/bash</code></pre></section>
 
 			<section><h4 style="color:yellow;">ansible playbook 3/3</h4>
-			  <pre><code class="groovy">- shell: | #create run script
+			  <pre><code class="yaml number-lines">- shell: | #create run script
   echo nohup java -jar agent.jar -jnlpUrl \
     {{jenkins_url}}/computer/{{slave_name}}/slave-agent.jnlp \
     -secret {{secret}} \>\> slave.log 2\>\&1 \& > \
