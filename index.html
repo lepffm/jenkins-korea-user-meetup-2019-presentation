@@ -259,14 +259,14 @@ hello.groovy<code data-trim data-noescape>print 'hello ' + Jenkins.instance.syst
 				<section>
 						<h2>create jnlp slave</h2>
 					<section>
-						<h1>with ansible</h1>
+						<h2>with</h2><h1>ansible</h1>
 					</section>
 					<section>
 						AS-IS<br>
-						<p>master</p>
+						<p class="left">master</p>
 						<ul><li>create node</li>
 							<li>hand over slave.jar, script with secrets</li></ul>
-						<p>target server</p>
+						<p class="left">target server</p>
 						<ul>
 						<li>create slave directory and upload files</li>
 						<li>launch jnlp slave</li>
@@ -274,7 +274,7 @@ hello.groovy<code data-trim data-noescape>print 'hello ' + Jenkins.instance.syst
 						</section>
 					<section>
 						TO-BE<br>
-						<p>ansible</p>
+						<p class="left">ansible</p>
 						<ul><li>create node</li>
 						<li>create slave directory </li>
 						<li>download slave.jar</li>
