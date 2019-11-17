@@ -35,13 +35,11 @@
 	<body>
 
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
 					<h3>various methods of</h3>
 					<h2>Jenkins Infrastructure Management</h2>
-					<p>
+					<p class="fragment">
 						<small>by Glen</small>
 					</p>
 				</section>
@@ -78,9 +76,9 @@
 							<section>
 							  <h3 style="color:yellow;">Bad</h3>
 							  <ul>
-								<li>꼭 내가 있어야 일이 돌아가냐!</li>
-								<li>Human Error.. 내가 해봐서 아는데, <br>꼭 한두개는 실수하더라...</li>
-								<li>멋이 안난다.</li>
+								<li class="fragment">꼭 내가 있어야 일이 돌아가냐!</li>
+								<li class="fragment">Human Error.. 내가 해봐서 아는데, <br>꼭 한두개는 실수하더라...</li>
+								<li class="fragment">멋이 안난다.</li>
 							  </ul>
 							</section>
 				  </section>
@@ -100,7 +98,7 @@
 							<li>급하게 쓸때는 간단하게.. </li>
 							<li>은근히 많은 기능, 하지만 써보신 분 손!!!</li>
 						  </ul>
-						  <pre><code data-trim data-noescape>java -jar jenkins-cli.jar \
+						  <pre class="fragment"><code data-trim data-noescape>java -jar jenkins-cli.jar \
   -auth @secret -s http://jenkins.meetup:8080 list-jobs </code></pre>
 						</section>
 						  <section>
@@ -113,7 +111,7 @@
 							  <pre><code data-trim data-noescape>curl --user $TOKEN -X POST -g \
 "http://jenkins.meetup:8080/\
 computer/SLAVE/api/xml?xpath=//offline[.='false']"</code></pre>
-								<ul>
+								<ul class="fragment">
 								  <li>Java - square의 <a href="https://square.github.io/retrofit/">Retrofit</a> 활용</li>
 								</ul>
 								<pre><code data-trim data-noescape>public interface JenkinsRestClient {
@@ -131,7 +129,7 @@ computer/SLAVE/api/xml?xpath=//offline[.='false']"</code></pre>
 									<li><a href="https://github.com/arangamani/jenkins_api_client">ruby-client</a> ★ 383</li>
 								  </ul>
 								  <br><br>
-								  <h4>보시다시피 별로 인기가 없네요...</h4>
+								  <h4 class="fragment">보시다시피 별로 인기가 없네요...</h4>
 								</section>
 							</section>
 
@@ -170,7 +168,7 @@ def name = "folder-job-creation-example"
 def folder = j.createProject(Folder.class, name)
 folder.description = "made by groovy script"
 <u>folder.save()</u></code></pre>
-			  <h4> ※ Don't forget to <font color="red">save</font> it.</font></h4>
+			  <h4 class="fragment"> ※ Don't forget to <font color="red">save</font> it.</font></h4>
 			  </section>
 					  <section>
 						  <h3 style="color:yellow;">Test</h3>
@@ -224,7 +222,7 @@ hello.groovy<code data-trim data-noescape>print 'hello ' + Jenkins.instance.syst
 							  
 							</ul>
 							<br><br>
-							<h5>... stay tuned</h5>
+							<h5 class="fragment">... stay tuned</h5>
 						  </section>
 							</section>
 				<section>
@@ -316,17 +314,12 @@ if(slave){ print slave.computer.jnlpMac }</code></pre>
 		<script src="js/reveal.js"></script>
 
 		<script>
-
-			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: true,
 				progress: true,
 				center: true,
 				hash: true,
-
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
