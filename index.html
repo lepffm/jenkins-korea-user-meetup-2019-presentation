@@ -301,7 +301,7 @@ if(slave){ print slave.computer.jnlpMac }</code></pre>
 	executable: /bin/bash</code></pre></section>
 
 			<section><h4 style="color:yellow;">ansible playbook 3/3</h4>
-			  <pre><code class="yaml number-lines">- shell: | #create run script
+			  <pre><code class="yaml" data-line-numbers="">- shell: | #create run script
   echo nohup java -jar agent.jar -jnlpUrl \
     {{jenkins_url}}/computer/{{slave_name}}/slave-agent.jnlp \
     -secret {{secret}} \>\> slave.log 2\>\&1 \& > \
