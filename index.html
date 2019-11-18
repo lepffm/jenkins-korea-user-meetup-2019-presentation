@@ -203,12 +203,11 @@ folder.save()</code></pre>
 							  e.g. "verification of plugin version"
 							  <pre class="fragment"><code class="groovy" data-trim data-noescape>pluginName="Git plugin"; pluginVersion="3.9.3"
 
-def plugin = Jenkins.instance.pluginManager.plugins.any{ 
-it.active && 
-it.displayName == pluginName && 
-it.version == pluginVersion }
+def plugin = Jenkins.instance.pluginManager.plugins.find{ 
+  it.active && it.displayName == pluginName
+}
 
-assert plugin</code></pre></p>
+assert plugin.version == pluginVersion</code></pre></p>
 						  </section>
 						  <section><h3>자연스러운 궁금증</h3>
 							
