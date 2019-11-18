@@ -217,6 +217,9 @@ assert plugin.version == pluginVersion</code></pre></p>
 						  <section>
 							  <h3>Using Pipeline</h3>
 								  <pre><code class="groovy">pipeline {
+  environment {
+    token = credentials('jenkins-token')
+  }
   agent any
   stages{
     stage("demo"){
