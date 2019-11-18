@@ -225,7 +225,7 @@ assert plugin</code></pre></p>
         script{
 	  def ret=sh(returnStdout: true, 
 	    script: "curl --user $token \
-              http://$JENKINS/scriptText 
+              http://$JENKINS/scriptText \
               --data-urlencode \"script=\$(cat hello.groovy)\"")
 	}
       }
