@@ -223,7 +223,7 @@ assert plugin.version == pluginVersion</code></pre></p>
       steps{
         script{
 	  def ret=sh(returnStdout: true, 
-	    script: "curl --user $token \
+	    script: "curl -s --user $token \
               $JENKINS_URL/scriptText \
               --data-urlencode \"script=println 'hi jenkins user'\"")
           echo ret
