@@ -219,13 +219,13 @@ assert plugin.version == pluginVersion</code></pre></p>
 								  <pre><code class="groovy">pipeline {
   agent any
   stages{
-    stage{
+    stage("demo"){
       steps{
         script{
 	  def ret=sh(returnStdout: true, 
 	    script: "curl --user $token \
-              http://$JENKINS/scriptText \
-              --data-urlencode \"script=\$(cat hello.groovy)\"")
+              $JENKINS_URL/scriptText \
+              --data-urlencode \"script=println hi\"")
 	}
       }
     }
