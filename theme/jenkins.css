@@ -23,7 +23,7 @@ a {
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
-a:hover {
+a:hover, a:active {
   color: #f3d7ac;
   text-shadow: none;
   border: none; }
