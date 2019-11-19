@@ -34,14 +34,14 @@ a:hover, a:active {
 }
 */
 a:link, a:visited {
-  color: #c0a86e;
+  color: #333;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 a:hover, a:active {
-  color: #fff;
+  color: #c0a86e;
   text-shadow: none;
   border: none; }
 
