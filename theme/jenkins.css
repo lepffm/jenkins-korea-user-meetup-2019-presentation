@@ -53,7 +53,7 @@ a:hover, a:active {
 
 .CodeMirror {
     line-height: 1em;
-    font-family: monospace;
+    font-family: sans-serif, monospace;
     position: relative;
     overflow: hidden;
     background-color: black;
