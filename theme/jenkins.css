@@ -24,15 +24,6 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: none;
   word-wrap: break-word; }
 
-/*
-a:link, a:visited {
-    text-decoration: none;
-    color: #3b73af;
-}
-a:hover, a:active {
-    text-decoration: underline;
-}
-*/
 a:link, a:visited {
   color: #333;
   text-decoration: none;
@@ -59,3 +50,11 @@ a:hover, a:active {
     color: #8888ff;
 }
 
+.CodeMirror {
+    line-height: 1em;
+    font-family: monospace;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+}
