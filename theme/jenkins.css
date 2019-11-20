@@ -49,18 +49,12 @@ a:hover, a:active {
 .console-output a:visited {
     color: #8888ff;
 }
-/*
+
 .CodeMirror {
     line-height: 1em;
     font-family: monospace;
     position: relative;
     overflow: hidden;
-    background-color: black;
-    color: white;
-}
-*/
-textarea {
-    margin-bottom: 0;
     background-color: black;
     color: white;
 }
