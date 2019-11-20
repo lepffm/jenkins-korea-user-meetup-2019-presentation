@@ -59,7 +59,7 @@ a:hover, a:active {
     color: white;
 }
 */
-TEXTAREA {
+textarea {
     margin-bottom: 0;
     background-color: black;
     color: white;
