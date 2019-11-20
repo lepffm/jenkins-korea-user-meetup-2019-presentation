@@ -58,3 +58,8 @@ a:hover, a:active {
     background-color: black;
     color: white;
 }
+TEXTAREA {
+    margin-bottom: 0;
+    background-color: black;
+    color: white;
+}
